@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 2px #000;
+}
+:root {
+  --primary-color: blue;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+/* NAVIGATION BAR */
+#navbar {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#navbar::before {
+  content: "";
+  background-color: rgb(50, 21, 21);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+/* NAVIGATION BAR LOGO AND IMAGE */
+
+#logo img {
+  height: 5rem;
+  width: 5rem;
+  width: 10rem;
+  height: auto;
+  margin: 0.5rem 0.6rem;
+  border: 0.2rem solid black;
+  border-radius: 5%;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+ul li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 0.3rem 2.2rem;
+  border-radius: 1rem;
+  font-family: "Fjalla One", sans-serif;
+}
+ul li a:hover {
+  color: black;
+  background-color: white;
+  text-shadow: none;
+}
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3.3rem 20rem;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+}
+a:active {
+  background-color: yellow;
+}
+#home::before {
+  content: "";
+  background: url(food2.jpg) no-repeat center center/cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center; */
+  position: absolute;
+  height: 96%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8;
+  margin-bottom: 15rem;
+}
+#home h1 {
+  color: white;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  font-size: 4rem;
+}
+#home p {
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  font-family: "Lobster Two", cursive;
+}
+#home button {
+  font-size: 2rem;
+}
+/* SERVICES SECTION */
+.services-container::before {
+  content: "";
+  background: url(/FooddDeliveryWebsite/v\ theme.jpg) no-repeat center
+    center/cover;
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  z-index: -1;
+  opacity: 0.5;
+}
+#services {
+  margin: 0.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  font-family: "Lobster Two", cursive;
+}
+#services .box {
+  border: 0.2rem solid brown;
+  padding: 3.4rem;
+  margin: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  background-color: #f9f6f6;
+  font-family: "Lobster Two", cursive;
+  transition: all;
+  transition-duration: 2s;
+}
+#services .box:hover {
+  position: relative;
+  bottom: 1rem;
+  cursor: pointer;
+}
+#services .box p,
+h2 {
+  text-shadow: none;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+#services .box img {
+  border: 0.2rem solid brown;
+  height: 16rem;
+  display: block;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+/* CLIENTS SECTION */
+#client-section {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+#client-section .h-primary {
+  padding: 3rem;
+}
+#client-section::before {
+  content: "";
+  background: url(Clients/Foodtheme.jpg) no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  margin-top: 1.5rem;
+  opacity: 0.4;
+}
+#clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  transition: all;
+  transition-duration: 2s;
+}
+#clients .client-items img:hover {
+  position: relative;
+  bottom: 1rem;
+}
+#clients #clients-item1 img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 1.2rem;
+  margin: 0.5rem;
+}
+#clients #clients-item2 img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+#clients #clients-item3 img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 2rem;
+
+  padding: 1rem;
+}
+#clients #clients-item4 img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* CONTACT-SECTION */
+.contact-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3.4rem;
+}
+.contact-box form {
+  width: 30%;
+  margin-top: 6rem;
+}
+.contact-box label {
+  font-size: 2rem;
+}
+.contact-box input,
+.contact-box label,
+.contact-box textarea {
+  text-shadow: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Lobster Two", cursive;
+}
+#contact::before {
+  content: "";
+  background: url(contactUs.jpg) no-repeat center center/cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* UTILITY CLASSES */
+.h-primary {
+  font-size: 3.1rem;
+  padding: 1.2rem;
+  font-family: "Lobster Two", cursive;
+}
+.h-secondary {
+  font-size: 0.2rem;
+  padding: 1.2rem;
+  font-family: "Lobster Two", cursive;
+}
+.btn {
+  padding: 0.6rem 2rem;
+  border: 0.2rem solid white;
+  background-color: brown;
+  color: white;
+  margin: 1.7rem;
+  font-size: 0.1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover {
+  color: brown;
+  font-weight: bolder;
+  background-color: burlywood;
+  text-shadow: none;
+  font-size: 1.2rem;
+}
+.center {
+  text-align: center;
+}
+footer {
+  background-color: black;
+  color: white;
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .h-primary {
+    font-size: 2rem;
+  }
+  ul li {
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  #home p {
+    font-size: 5rem;
+  }
+  #client-section::before {
+    height: 3%;
+  }
+  #home {
+    padding: 0;
+    height: 20rem;
+  }
+  #home::before {
+    height: 35%;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .services-container {
+    position: relative;
+    top: 7.9rem;
+    min-height: 100vh;
+  }
+}
